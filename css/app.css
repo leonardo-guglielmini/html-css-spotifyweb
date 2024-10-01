@@ -26,6 +26,37 @@ img{
     display: block;
 }
 
+/*DEBUG RULES*/
+
+.debug >*, .debug .main-content>*{
+    border: 1px dashed red;
+    background-color: beige;
+}
+
+/*LAYOUT*/
+
+.viewport-full{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.main-content{
+    display: flex;
+    flex-grow:1;
+}
+
+.player{
+    height: 130px;
+}
+
+.sidebar{
+    width: 230px;
+}
+
+
 /*DESKTOP FIRST*/
 
 @media (max-width:992px){
@@ -37,6 +68,10 @@ img{
 }
 
 @media (max-width:576px){
+
+    .sidebar{
+        width:50px;
+    }
     
 }
 
