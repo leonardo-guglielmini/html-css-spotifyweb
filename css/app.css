@@ -49,9 +49,14 @@ img{
 }
 
 .sidebar{
+    display: flex;
+    flex-flow: column wrap;
     width: 230px;
 }
 
+.sidebar .main-menu{
+    flex-grow: 1;
+}
 
 .player{
     height: 130px;
@@ -123,6 +128,12 @@ img{
     padding: 5px;
 }
 
+/*TEXT FORMATTING*/
+
+.bold{
+    font-weight: bold;
+}
+
 /*PLAYER*/
 
 .player{
@@ -157,6 +168,89 @@ img{
     width: 25px;
 }
 
+/*SIDEBAR*/
+
+.main-content .sidebar{
+    background-color: black;
+}
+
+.sidebar{
+    color: white;
+    padding: 20px;
+}
+
+.sidebar .logo{
+    width: 150px;
+    padding-bottom: 30px;
+}
+
+.sidebar .home-menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar .home-menu > a{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.sidebar .home-menu img{
+    display: inline-block;
+    width: 15%;
+    vertical-align: middle;
+}
+
+.playlist-menu{
+    padding: 20px 0;
+}
+
+.playlist-menu h2{
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.playlist-menu i{
+    border: 2px solid transparent;
+    background-color: #A3A3A3;
+    color:  black;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.playlist-menu ul{
+    margin-top: 10px;
+}
+
+.playlist-menu ul li{
+    padding: 10px 0;
+}
+
+.user-menu img{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.user-menu .download-cta{
+    width: 20px;
+}
+
+.user-menu .user{
+    width: 30px;
+    background-color: grey;
+    border-radius: 100%;
+}
+
+
+.hr-line{
+    border: 1px solid grey;
+    width: 90%;
+    margin: 10px 0;
+}
+
+.main-menu .logo-small{
+    display: none;
+}
 
 
 /*DESKTOP FIRST*/
@@ -229,6 +323,32 @@ img{
     .song-played-img{
         margin-bottom:5px;
         margin-top: 10px;
+    }
+
+    /*SIDEBAR*/
+
+    .sidebar{
+        padding: 5px;
+    }
+
+    .main-menu .logo-small{
+        display: inline-block;
+        width: 100%;
+    }
+    .wd-lg{
+        display: none;
+    }
+
+    .sidebar .home-menu .wd-xs{
+        width: 80%;
+    }
+
+    .sidebar {
+        text-align: center;
+    }
+
+    .user-menu .download-cta{
+        padding-bottom: 10px;
     }
 
 }
