@@ -58,14 +58,23 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 10px;
 }
 
 .song-played, .song-options{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    min-width: 160px;
+    width: 30%;
 }
+
+.song-played{
+    justify-content: flex-start;
+}
+
+.song-options{
+    justify-content: flex-end;
+}
+
 
 .song{
     padding-right: 70px;
@@ -74,7 +83,6 @@ img{
 .song-played-img{
     width: 45px;
     float: left;
-    padding-top: 10px;
     padding-right: 5px;
 }
 
@@ -92,17 +100,10 @@ img{
     padding: 10px 0;
 }
 
-.song-menu{
-    text-align: center;
-}
-
-.song-menu .controls .btn{
-    display: inline-block;
-    padding: 0 10px;
-}
-
-.song-menu .controls .play{
-    padding: 0 20px;
+.song-menu .controls{
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
 }
 
 .progress-bar-background, .progress-bar-foreground, .volume-bar-background, .volume-bar-foreground{
@@ -110,6 +111,10 @@ img{
     vertical-align: middle;
     border-radius: 30px;
     text-align: left;
+}
+
+.song-menu .controls .play{
+    padding: 0 10px;
 }
 
 .song-options .btn{
@@ -121,7 +126,6 @@ img{
 .player{
     background-color: #282828;
     color: white;
-    padding: 0 5px;
 }
 
 .progress-bar-background, .volume-bar-background{
@@ -136,11 +140,11 @@ img{
 }
 
 .progress-bar-background{
-    width: 425px;
+    width: calc(25vw + 20px);
 }
 
 .progress-bar-foreground{
-    width: 85px;
+    width: calc(1vw + 20px);
 }
 
 .volume-bar-background{
@@ -156,30 +160,21 @@ img{
 /*DESKTOP FIRST*/
 
 @media (max-width:992px){
-    
-    .progress-bar-background{
-        width: 250px;
-    }
 
-    .progress-bar-foreground{
-        width: 50px;
-    }
-
-    
 }
 
 @media (max-width:768px){
 
     .progress-bar-background{
-        width: 145px;
+        width: calc(15vw + 20px);
     }
 
     .progress-bar-foreground{
-        width: 30px;
+        width: calc(3vw + 20px);
     }
 
     .volume-bar-background{
-        width: 100px;
+        width: 105px;
     }
     
     .volume-bar-foreground{
@@ -195,7 +190,7 @@ img{
     }
 
     .song{
-        padding-right: 10px;
+        padding-right: 40px;
     }
 }
 
@@ -206,11 +201,11 @@ img{
     }
 
     .progress-bar-background{
-        width: 130px;
+        width: calc(10vw + 20px);
     }
 
     .progress-bar-foreground{
-        width: 25px;
+        width: calc(1vw + 20px);
     }
 
     .volume-bar-background{
@@ -218,7 +213,7 @@ img{
     }
     
     .volume-bar-foreground{
-        width: 15px;
+        width: 17px;
     }
 
     .song-played .song-title{
@@ -228,5 +223,11 @@ img{
     .song{
         padding-right: 10px;
     }
+
+    .song-played-img{
+        margin-bottom:5px;
+        margin-top: 10px;
+    }
+
 }
 
