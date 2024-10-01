@@ -48,23 +48,155 @@ img{
     flex-grow:1;
 }
 
-.player{
-    height: 130px;
-}
-
 .sidebar{
     width: 230px;
 }
+
+
+.player{
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song-played, .song-options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 160px;
+}
+
+.song{
+    padding-right: 70px;
+}
+
+.song-played-img{
+    width: 45px;
+    float: left;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+.song-played .song-title{
+    white-space: nowrap;
+    color: #878787;
+}
+
+.share .btn{
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.song-menu .controls, .song-menu .progress-bar{
+    padding: 10px 0;
+}
+
+.song-menu{
+    text-align: center;
+}
+
+.song-menu .controls .btn{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.song-menu .controls .play{
+    padding: 0 20px;
+}
+
+.progress-bar-background, .progress-bar-foreground, .volume-bar-background, .volume-bar-foreground{
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 30px;
+    text-align: left;
+}
+
+.song-options .btn{
+    padding: 5px;
+}
+
+/*PLAYER*/
+
+.player{
+    background-color: #282828;
+    color: white;
+    padding: 0 5px;
+}
+
+.progress-bar-background, .volume-bar-background{
+    background-color:  #5A5A5A;
+    height: 2px;
+    line-height: 0;
+}
+
+.progress-bar-foreground, .volume-bar-foreground{
+    background-color: #C1C1C1;
+    height: 1px;
+}
+
+.progress-bar-background{
+    width: 425px;
+}
+
+.progress-bar-foreground{
+    width: 85px;
+}
+
+.volume-bar-background{
+    width: 120px;
+}
+
+.volume-bar-foreground{
+    width: 25px;
+}
+
 
 
 /*DESKTOP FIRST*/
 
 @media (max-width:992px){
     
+    .progress-bar-background{
+        width: 250px;
+    }
+
+    .progress-bar-foreground{
+        width: 50px;
+    }
+
+    
 }
 
 @media (max-width:768px){
+
+    .progress-bar-background{
+        width: 145px;
+    }
+
+    .progress-bar-foreground{
+        width: 30px;
+    }
+
+    .volume-bar-background{
+        width: 100px;
+    }
     
+    .volume-bar-foreground{
+        width: 20px;
+    }
+
+    .share .btn{
+        display: block;
+    }
+
+    .song-played-img{
+        width: 40px;
+    }
+
+    .song{
+        padding-right: 10px;
+    }
 }
 
 @media (max-width:576px){
@@ -72,6 +204,29 @@ img{
     .sidebar{
         width:50px;
     }
+
+    .progress-bar-background{
+        width: 130px;
+    }
+
+    .progress-bar-foreground{
+        width: 25px;
+    }
+
+    .volume-bar-background{
+        width: 85px;
+    }
     
+    .volume-bar-foreground{
+        width: 15px;
+    }
+
+    .song-played .song-title{
+        white-space: wrap;
+    }
+
+    .song{
+        padding-right: 10px;
+    }
 }
 
