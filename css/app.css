@@ -98,19 +98,21 @@ img{
 
 .song-menu .controls, .song-menu .progress-bar{
     padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .song-menu .controls{
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-around;
+    column-gap: 20px;
 }
 
 .progress-bar-background, .progress-bar-foreground, .volume-bar-background, .volume-bar-foreground{
-    display: inline-block;
-    vertical-align: middle;
     border-radius: 30px;
-    text-align: left;
+}
+
+.progress-bar-background{
+    margin: 0 5px;
 }
 
 .song-menu .controls .play{
@@ -130,7 +132,7 @@ img{
 
 .progress-bar-background, .volume-bar-background{
     background-color:  #5A5A5A;
-    height: 2px;
+    height: 1px;
     line-height: 0;
 }
 
