@@ -72,11 +72,7 @@ button{
     display: flex;
     flex-flow: column wrap;
     flex-shrink: 0;
-    width: 230px;
-}
-
-.sidebar .main-menu{
-    flex-grow: 1;
+    width: var(--sidebar-width)
 }
 
 .sidebar .logo{
@@ -188,6 +184,7 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 20px;
 }
 
 .track-menu .progress-bar{
@@ -195,11 +192,16 @@ button{
     gap: 20px;
 	font-size: 12px;
 	align-items: center;
-	padding: 14px 0;
+	padding: 10px 0;
 }
 
 .track-menu .controls .play{
     margin: 0 10px;
+    border: 2px solid white;
+    border-radius: 100%;
+    padding: 10px;
+    padding-left: 12px;
+    text-align: center;
 }
 
 .track-options{
