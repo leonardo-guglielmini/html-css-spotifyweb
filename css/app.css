@@ -9,6 +9,8 @@
     --grey: #717171;
     --dark-grey: #282828; 
     --light-grey: #A3A3A3;
+    --dark-blue: #141922;
+    --less-black: #080B12;
 }
 
 *,*::after,*::before{
@@ -137,6 +139,8 @@ button{
 
 .content{
     flex-grow: 1;
+    display: flex;
+    flex-flow: column wrap;
 }
 
 /*PLAYER - LAYOUT*/
@@ -269,7 +273,7 @@ button{
 .user-menu .user{
     width: 30px;
     background-color: var(--grey);
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
 
@@ -279,7 +283,29 @@ button{
     margin: 10px 0;
 }
 
+/*CONTENT - GRAPHIC*/
 
+.content{
+    background-color: var(--dark-blue);
+    flex-grow: 1;
+    color: var(--white);
+}
+
+.upgrade-now{
+    background-color: var(--less-black);
+    text-align: right;
+    padding: 35px 30px;
+}
+
+.upgrade-now a{
+    border: 1px solid var(--white);
+    border-radius: 999px;
+    padding: 10px 40px;
+}
+
+.upgrade-now a .btn{
+    text-transform: uppercase;
+}
 
 
 /*DESKTOP FIRST*/
