@@ -90,10 +90,10 @@ button{
     flex-wrap: wrap;
 }
 
-.sidebar .home-menu > a{
+.sidebar .home-menu a{
     width: 100%;
-    padding: 10px 0;
     font-size: 18px;
+    padding: 5px 0;
 }
 
 .sidebar img{
@@ -113,6 +113,7 @@ button{
 .playlist-menu h2{
     text-transform: uppercase;
     padding-bottom: 10px;
+    color: var(--white);
 }
 
 .playlist-menu ul{
@@ -151,12 +152,14 @@ button{
     display: flex;
 	align-items: center;
 	gap: 10px;
-	min-width: var(--sidebar-width);
+	width: var(--sidebar-width);
+    min-width: 192px;
 	padding: 0 10px;
 }
 
 .track-info{
     flex-grow: 1;
+    white-space: nowrap;
 }
 
 .track-image{
@@ -206,7 +209,8 @@ button{
 	align-items: center;
 	gap: 12px;
 	padding: 0 10px;
-    min-width: var(--sidebar-width);
+    width: var(--sidebar-width);
+    min-width: 192px;
 }
 
 /*PLAYER - GRAPHIC*/
@@ -289,6 +293,11 @@ button{
 }
 
 @media (max-width:576px){
+
+    /*PLAYER*/
+    .track-info{
+        white-space: wrap;
+    }
 
     /*SIDEBAR*/
 
