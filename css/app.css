@@ -7,9 +7,9 @@
     --player-height: 100px;
     --black: #000000;
     --white: #ffffff;
-    --grey: #717171;
-    --dark-grey: #282828; 
-    --light-grey: #A3A3A3;
+    --gray: #717171;
+    --dark-gray: #282828; 
+    --light-gray: #A3A3A3;
     --dark-blue: #141922;
     --less-black: #080B12;
     --light-green: #ADFF2F;
@@ -60,6 +60,20 @@ button{
     font-weight: bold;
 }
 
+.color-gray{
+    color: var(--gray);
+}
+
+/*UTILITIES*/
+
+.padding-bottom-10{
+    padding-bottom: 10px;
+}
+
+.padding-10{
+    padding: 10px;
+}
+
 /*LAYOUT*/
 
 .viewport-full{
@@ -76,7 +90,7 @@ button{
 .sidebar{
     flex-shrink: 0;
     width: var(--sidebar-width);
-    color: var(--grey);
+    color: var(--gray);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -155,7 +169,7 @@ button{
 
 .playlist-menu i{
     border: 2px solid transparent;
-    background-color: var(--light-grey);
+    background-color: var(--light-gray);
     color:  var(--black);
     margin-right: 10px;
     vertical-align: middle;
@@ -167,13 +181,13 @@ button{
 
 .user-menu .user{
     width: 30px;
-    background-color: var(--grey);
+    background-color: var(--gray);
     border-radius: 50%;
 }
 
 
 .hr-line{
-    border: 1px solid var(--grey);
+    border: 1px solid var(--gray);
     width: 90%;
     margin: 10px 0;
 }
@@ -196,10 +210,6 @@ button{
     padding: 30px 0;
 }
 
-.recent{
-    padding: 15px;
-}
-
 .recent-tracks{
     display: flex;
     flex-wrap: wrap;
@@ -214,10 +224,6 @@ button{
 .content .track-info{
     text-align: center;
     padding-top: 15px;
-}
-
-.content .track-info span{
-    color: var(--grey);
 }
 
 .upgrade-now{
@@ -237,7 +243,7 @@ button{
 }
 
 .menu-selection > a{
-    color: var(--grey);
+    color: var(--gray);
     text-transform: uppercase;
 }
 
@@ -254,6 +260,23 @@ button{
     left: 25%;
 }
 
+.for-you .for-you-tracks{
+    display: flex;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.popular .popular-tracks{
+    display: flex;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.popular .card img{
+    border-radius: 50%;
+}
+
+
 /*PLAYER - LAYOUT*/
 
 .player{
@@ -262,7 +285,7 @@ button{
     align-items: center;
     padding: 10px 0;
     height: var(--player-height);
-    background-color: var(--dark-grey);
+    background-color: var(--dark-gray);
     color: var(--white);
 }
 
