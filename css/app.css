@@ -321,6 +321,30 @@ button{
     padding-top: 10px;
 }
 
+
+.card figure i{
+    display: none;
+}
+
+.card:hover{
+
+    figure {
+        position: relative;
+
+        img{
+            filter: brightness(50%);
+        }
+
+        i{
+        display: inline;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+    }
+}
+
 .popular .card img{
     border-radius: 50%;
 }
@@ -349,6 +373,11 @@ button{
 .track-played .track-info{
     flex-grow: 1;
     white-space: nowrap;
+
+    > .track-name:hover{
+        color: var(--white);
+        text-decoration: underline;
+    }
 }
 
 .track-image{
@@ -386,11 +415,6 @@ button{
 
 .track-menu .controls .play{
     margin: 0 10px;
-    border: 2px solid var(--white);
-    border-radius: 100%;
-    padding: 10px;
-    padding-left: 12px;
-    text-align: center;
 }
 
 .track-options{
