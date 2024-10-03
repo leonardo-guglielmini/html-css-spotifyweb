@@ -514,8 +514,8 @@ button{
         white-space: wrap;
     }
 
-    .track-options .wd-lg{
-        display: none;
+    .track-options{
+        flex-wrap: wrap;
     }
 
     /*SIDEBAR*/
