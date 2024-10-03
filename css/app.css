@@ -418,6 +418,10 @@ button{
     margin: 0 10px;
 }
 
+.track-menu .controls .play:hover{
+    transform: scale(1.1);
+}
+
 .track-options{
     display: flex;
 	align-items: center;
