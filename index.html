@@ -12,29 +12,28 @@
     <div class="viewport-full">
         <div class="main-content">
             <header class="sidebar">
-                <a href="#"><img src="./img/logo.svg" alt="logo" class="logo wd-lg"></a>
+                <a href="#"><img src="./img/logo.svg" alt="logo" class="logo wd-lg padding-20"></a>
                 <a href="#"><img src="./img/logo-small.svg" alt="logo" class="logo-small"></a>
 
-                <div class="home-menu">    
+                <nav class="home-menu">    
                     
-                    <a href="#" class="current-page">
-                        <span class="current-page-indicator"></span>
+                    <a href="#" class="current-page padding-20">
                         <img src="./img/home.svg" alt="home" class="wd-xs"> <span class="wd-lg">Home</span>
                     </a>
 
-                    <a href="#">
+                    <a href="#" class="padding-20">
                         <img src="./img/search.svg" alt="search" class="wd-xs"> <span class="wd-lg">Cerca</span>
                     </a>
 
-                    <a href="#">
+                    <a href="#" class="padding-20">
                         <img src="./img/libreria.svg" alt="library" class="wd-xs"> <span class="wd-lg">La tua libreria</span>
                     </a>
 
-                </div>
+                </nav>
 
-                <div class="playlist-menu wd-lg">
+                <div class="playlist-menu wd-lg padding-20">
                     <h2>Playlist</h2>
-                    <div class="btn"><i class="fa-solid fa-plus fa-fw fa-2x"></i>Crea Playlist</div>
+                    <button class="new-playlist btn"><i class="fa-solid fa-plus fa-fw fa-2x"></i>Crea Playlist</button>
                     <ul>
                         <li><a href="#">Nome Playlist</a></li>
                         <li><a href="#">Nome Playlist</a></li>
@@ -46,16 +45,19 @@
                     </ul>
                 </div>
 
-                <div class="user-menu">
-                    <a href="#"><img src="./img/download.svg" alt="download" class="download-cta"> <span class="wd-lg">Install app</span></a>
+                <div class="user-menu padding-20">
+                    <a href="#" class="download-cta"><img src="./img/download.svg" alt="download" class="download-cta-icon"> <span class="wd-lg">Install app</span></a>
                     <div class="hr-line wd-lg"></div>
-                    <a href="#"><img src="./img/profile.svg" alt="user" class="user"> <span class="bold wd-lg">John Doe</span></a>
+                    <a href="#"><img src="./img/profile.svg" alt="user" class="user"> <span class="bold wd-lg username">John Doe</span></a>
                 </div>
             </header>
 
             <main class="content">
                 <section class="upgrade-now">
-                    <a href="#"><button class="btn">Effettua l'upgrade</button></a>
+                    <div class="upgrade-now-cta">
+                        <a href="#"><button class="btn">Effettua l'upgrade</button></a>
+                    </div>
+                    
                 </section>
                 
                 <section class="home-page">
@@ -77,67 +79,78 @@
                         <!-- TODO check/fix responsive -->
                         <h2 class="padding-bottom-10">Recently played</h2>
                         <div class="recent-tracks">
-                            <div class="card">
-                                <figure>
-                                    <img src="./img/metal_lifting.jpg" alt="heavy metal">
-                                </figure>
-                                <figcaption class="track-info color-gray">
-                                    <h4>Heavy Metal</h4>
-                                    <span>Subtitle</span>
-                                </figcaption>
+                            <div class="col">
+                                <div class="card">
+                                    <figure>
+                                        <img src="./img/metal_lifting.jpg" alt="heavy metal">
+                                    </figure>
+                                    <figcaption class="track-info">
+                                        <h4>Heavy Metal</h4>
+                                        <span class=" color-gray">Subtitle</span>
+                                    </figcaption>
+                                </div>
                             </div>
 
-                            <div class="card">
-                                <figure>
-                                    <img src="./img/stranger.jpeg" alt="stranger things">
-                                </figure>
-                                <figcaption class="track-info color-gray">
-                                    <h4>Strnger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h4>
-                                    <span>Kyle Dixon &amp; Michael Stein</span>
-                                </figcaption>
+                            <div class="col">
+                                <div class="card">
+                                    <figure>
+                                        <img src="./img/stranger.jpeg" alt="stranger things">
+                                    </figure>
+                                    <figcaption class="track-info">
+                                        <h4>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h4>
+                                        <span class=" color-gray">Kyle Dixon &amp; Michael Stein</span>
+                                    </figcaption>
+                                </div>
                             </div>
 
-                            <div class="card">
-                                <figure>
-                                    <img src="./img/aquietplace.jpeg" alt="a quiet place"
-                                    ></figure>
-                                <figcaption class="track-info color-gray">
-                                    <h4>A quiet place</h4>
-                                    <span>Subtitle</span>
-                                </figcaption>
+                            <div class="col">
+                                <div class="card">
+                                    <figure>
+                                        <img src="./img/aquietplace.jpeg" alt="a quiet place"
+                                        ></figure>
+                                    <figcaption class="track-info">
+                                        <h4>A quiet place</h4>
+                                        <span class=" color-gray">Subtitle</span>
+                                    </figcaption>
+                                </div>
                             </div>
 
-                            <div class="card">
-                                <figure>
-                                    <img src="./img/split.jpeg" alt="split">
-                                </figure>
-                                <figcaption class="track-info color-gray">
-                                    <h4>Split</h4>
-                                    <span>Subtitle</span>
-                                </figcaption>
+                            <div class="col">
+                                <div class="card">
+                                    <figure>
+                                        <img src="./img/split.jpeg" alt="split">
+                                    </figure>
+                                    <figcaption class="track-info">
+                                        <h4>Split</h4>
+                                        <span class=" color-gray">Subtitle</span>
+                                    </figcaption>
+                                </div>
                             </div>
 
-                            <div class="card">
-                                <figure>
-                                    <img src="./img/cure.jpeg" alt="a cure for wellness">
-                                </figure>
-                                <figcaption class="track-info color-gray">
-                                    <h4>A cure for wellness</h4>
-                                    <span>Subtitle</span>
-                                </figcaption>
+                            <div class="col">
+                                <div class="card">
+                                    <figure>
+                                        <img src="./img/cure.jpeg" alt="a cure for wellness">
+                                    </figure>
+                                    <figcaption class="track-info">
+                                        <h4>A cure for wellness</h4>
+                                        <span class=" color-gray">Subtitle</span>
+                                    </figcaption>
+                                </div>
                             </div>
 
-                            <div class="card">
-                                <figure>
-                                    <img src="./img/sinister.jpeg" alt="sinister">
-                                </figure>
-                                <figcaption class="track-info color-gray">
-                                    <h4>Sinister</h4>
-                                    <span>Subtitle</span>
-                                </figcaption>
+                            <div class="col">
+                                <div class="card">
+                                    <figure>
+                                        <img src="./img/sinister.jpeg" alt="sinister">
+                                    </figure>
+                                    <figcaption class="track-info">
+                                        <h4>Sinister</h4>
+                                        <span class=" color-gray">Subtitle</span>
+                                    </figcaption>
+                                </div>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="for-you padding-10">
@@ -147,23 +160,29 @@
                         <p class="padding-bottom-10 color-gray">Più ascolti, più accurati saranno i suggerimenti</p>
 
                         <div class="for-you-tracks">
-                            <div class="card">
-                                <figure>
-                                    <img src="./img/radar.jpeg" alt="release-radar">
-                                </figure>
-                                <figcaption class="track-info">
-                                    Release Radar
-                                </figcaption>
+
+                            <div class="col">
+                                <div class="card">
+                                    <figure>
+                                        <img src="./img/radar.jpeg" alt="release-radar">
+                                    </figure>
+                                    <figcaption class="track-info">
+                                        Release Radar
+                                    </figcaption>
+                                </div>
                             </div>
                             
-                            <div class="card">
-                                <figure>
-                                    <img src="./img/mixdaily.jpeg" alt="daily-mix">
-                                </figure>
-                                <figcaption class="track-info">
-                                    Daily Mix 1
-                                </figcaption>
+                            <div class="col">
+                                <div class="card">
+                                    <figure>
+                                        <img src="./img/mixdaily.jpeg" alt="daily-mix">
+                                    </figure>
+                                    <figcaption class="track-info">
+                                        Daily Mix 1
+                                    </figcaption>
+                                </div>
                             </div>
+    
                         </div>
                     </div>
                     
@@ -173,26 +192,30 @@
                         <p class="padding-bottom-10 color-gray">Più ascolti, più accurati saranno i suggerimenti</p>
 
                         <div class="popular-tracks">
-                            <div class="card">
-                                <figure>
-                                    <img src="./img/youg.jpeg" alt="release-radar">
-                                </figure>
-                                <figcaption class="track-info">
-                                    Lana Del Rey
-                                </figcaption>
+
+                            <div class="col">
+                                <div class="card">
+                                    <figure>
+                                        <img src="./img/youg.jpeg" alt="release-radar">
+                                    </figure>
+                                    <figcaption class="track-info">
+                                        Lana Del Rey
+                                    </figcaption>
+                                </div>
                             </div>
-                            
-                            <div class="card">
-                                <figure>
-                                    <img src="./img/einaudi.jpeg" alt="einaudi">
-                                </figure>
-                                <figcaption class="track-info">
-                                    Ludovico Einaudi
-                                </figcaption>
+
+                            <div class="col">
+                                <div class="card">
+                                    <figure>
+                                        <img src="./img/einaudi.jpeg" alt="einaudi">
+                                    </figure>
+                                    <figcaption class="track-info">
+                                        Ludovico Einaudi
+                                    </figcaption>
+                                </div>
                             </div>
                         </div>
                     </div>
-
                 </section>
             </main>
 
@@ -231,7 +254,9 @@
                     <span class="time-played">0:25</span>
 
                     <!--TODO progress bar-->
-                    <div class="slider"></div>
+                    <div class="slider">
+                        <div class="slider-foreground"></div>
+                    </div>
 
                     <span class="time-total">4:35</span>
                 </div>

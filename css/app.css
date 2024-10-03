@@ -4,6 +4,7 @@
 
 :root{
 	--sidebar-width: 230px;
+    --sidebar-padding-x: 20px; 
     --player-height: 100px;
     --black: #000000;
     --white: #ffffff;
@@ -45,6 +46,7 @@ button{
     border: none;
     color: currentColor;
     font-size: inherit;
+    cursor: pointer;
 }
 
 /*DEBUG RULES*/
@@ -74,6 +76,10 @@ button{
     padding: 10px;
 }
 
+.padding-20{
+    padding-left: var(--sidebar-padding-x);
+}
+
 /*LAYOUT*/
 
 .viewport-full{
@@ -91,9 +97,10 @@ button{
     flex-shrink: 0;
     width: var(--sidebar-width);
     color: var(--gray);
-    padding: 20px;
+    padding-top: var(--sidebar-padding-x);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 
@@ -112,9 +119,13 @@ button{
 }
 
 .sidebar .home-menu a{
-    width: 100%;
     font-size: 18px;
-    padding: 5px 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    > *:hover{
+        color: var(--white);
+    }
 }
 
 .sidebar img{
@@ -128,8 +139,14 @@ button{
 }
 
 .playlist-menu{
-    padding: 20px 0;
-    overflow-y: hidden;
+    padding-top: 20px;
+
+    >button:hover{
+        color: var(--white);
+        >i{
+            background-color: var(--white);
+        }
+    }
 }
 
 .playlist-menu h2{
@@ -140,6 +157,10 @@ button{
 
 .playlist-menu ul{
     margin-top: 10px;
+    
+    > *:hover{
+        color: var(--white);
+    }
 }
 
 .playlist-menu ul li{
@@ -148,6 +169,7 @@ button{
 
 .user-menu{
     margin-top: auto;
+    padding-bottom: 5px;
 }
 
 .user-menu img{
@@ -160,11 +182,14 @@ button{
     position: relative;
 }
 
-.home-menu .current-page-indicator{
-    border-left: 3px solid var(--light-green);
+.home-menu .current-page::before{
     height: 100%;
     position: absolute;
-    left: -19px;
+    content: " ";
+    width: 3px;
+    background-color: var(--light-green);
+    top:0;
+    left: 0;
 }
 
 .playlist-menu i{
@@ -175,8 +200,12 @@ button{
     vertical-align: middle;
 }
 
-.user-menu .download-cta{
+.user-menu .download-cta-icon{
     width: 20px;
+}
+
+.user-menu .download-cta:hover{
+    color: var(--white);
 }
 
 .user-menu .user{
@@ -185,9 +214,14 @@ button{
     border-radius: 50%;
 }
 
+.user-menu .username{
+    color: var(--white);
+}
+
 
 .hr-line{
-    border: 1px solid var(--gray);
+    height: 1px;
+    background-color: var(--light-gray);
     width: 90%;
     margin: 10px 0;
 }
@@ -198,7 +232,8 @@ button{
     flex-grow: 1;
     background-color: var(--dark-blue);
     color: var(--white);
-    overflow-y:scroll;
+    overflow-y:auto;
+    position: relative;
 }
 
 .menu-selection{
@@ -208,17 +243,21 @@ button{
     align-items: center;
     gap: 15px;
     padding: 30px 0;
+    
+    > a:hover{
+        color: var(--white);
+    }
 }
 
 .recent-tracks{
     display: flex;
     flex-wrap: wrap;
     padding-top: 10px;
-    gap: 20px;
 }
 
-.content .card{
-    max-width: 165px;
+.content .col{
+    width: calc(100%/6);
+    padding: 0 5px;
 }
 
 .content .track-info{
@@ -228,14 +267,25 @@ button{
 
 .upgrade-now{
     background-color: var(--less-black);
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     padding: 35px 30px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
 }
 
 .upgrade-now a{
     border: 1px solid var(--white);
     border-radius: 999px;
     padding: 10px 40px;
+}
+
+.upgrade-now-cta:hover{
+    transform:scale(1.1);
 }
 
 .upgrade-now a .btn{
@@ -252,7 +302,8 @@ button{
 }
 
 .menu-selection .current-page-indicator{
-    border: 1px solid var(--light-green);
+    content: " ";
+    background-color: var(--light-green);
     width: 50%;
     height: 1px;
     position: absolute;
@@ -262,13 +313,11 @@ button{
 
 .for-you .for-you-tracks{
     display: flex;
-    gap: 20px;
     padding-top: 10px;
 }
 
 .popular .popular-tracks{
     display: flex;
-    gap: 20px;
     padding-top: 10px;
 }
 
@@ -357,8 +406,16 @@ button{
     flex-grow: 1;
     width: 100px;
     height: 2px;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: var(--light-gray);
+
+    .foreground{
+        content: " ";
+        width: 20%;
+        height: 1px;
+        background-color: var(--white);        
+    }
 }
+
 
 .slider.no-grow{
     flex-grow: 0;
@@ -374,13 +431,21 @@ button{
 
 @media (max-width:992px){
 
+    .content .col{
+        width: calc(100%/4)
+    }
 }
 
 @media (max-width:768px){
 
+    .content .col{
+        width: calc(100%/2)
+    }
+
     .track-utils{
         flex-direction: column;
     }
+
 }
 
 @media (max-width:576px){
@@ -396,14 +461,18 @@ button{
 
     /*SIDEBAR*/
 
+
+    .padding-20{
+        --sidebar-padding-x:0;
+    }
+
     .sidebar{
-        width:50px;
-        padding: 5px;
+        --sidebar-width:50px;
     }
 
     .sidebar .logo-small{
         display: inline-block;
-        width: 100%;
+        width: 75%;
         margin-bottom: 20px;
     }
     
@@ -417,6 +486,10 @@ button{
 
     .sidebar {
         text-align: center;
+    }
+
+    .home-menu .current-page::before{
+        display: none;
     }
 
     .user-menu .download-cta{
