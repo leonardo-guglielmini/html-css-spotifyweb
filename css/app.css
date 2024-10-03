@@ -429,17 +429,44 @@ button{
 .slider{
     flex-grow: 1;
     width: 100px;
-    height: 2px;
+    height: 5px;
 	background-color: var(--light-gray);
+    position: relative;
+    cursor: pointer;
 
-    .foreground{
+    .slider-foreground{
         content: " ";
         width: 20%;
-        height: 1px;
-        background-color: var(--white);        
+        height: 5px;
+        background-color: var(--white);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);  
     }
 }
 
+.slider:hover
+{
+    .slider-foreground{
+        background-color: var(--light-green);
+    }
+    .dot{
+        display: inline;
+    }
+}
+
+.dot{
+    display: none;
+    content: " ";
+    background-color: var(--white);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%); 
+}
 
 .slider.no-grow{
     flex-grow: 0;
@@ -449,6 +476,14 @@ button{
 .track-utils, .sound-options{
     display: flex;
     gap: 12px;
+}
+
+.track-utils{
+    color: var(--gray);
+
+    :hover{
+        color: var(--white);
+    }
 }
 
 /*DESKTOP FIRST*/
